@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "7.0.0",
+      "sem_ver" : "8.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "acc8c25b5a27f7959e48a0ce48a5f038",
+      "MD5-CAM-1.0.1" : "2cbfbaad88d181601018aa6394a742d7",
       "PARENT:MD5-CAM-1.0.1" : "327A8885F97587660404644C3C6053B6"
     },
     "details" : {
@@ -8442,7 +8442,7 @@
           }
         },
         "pt-br" : {
-          "/data[at0001]/items[at0002]" : {
+          "/data[at0001]/items[at0002.1]" : {
             "source" : "*openEHR,FHIR,DAM(en)"
           }
         },
@@ -8450,9 +8450,6 @@
         "de" : {
           "" : {
             "source" : "openEHR, FHIR"
-          },
-          "/data[at0001]/items[at0002]" : {
-            "source" : "openEHR, FHIR, DAM"
           },
           "/data[at0001]/items[at0006]" : {
             "source" : "openEHR"
@@ -8474,12 +8471,12 @@
           },
           "/protocol[at0042]/items[at0047.1]" : {
             "source" : "FHIR, openEHR, DAM"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "source" : "openEHR, FHIR, DAM"
           }
         },
         "sv" : {
-          "/data[at0001]/items[at0002]" : {
-            "source" : "openEHR,FHIR,DAM"
-          },
           "/data[at0001]/items[at0006]" : {
             "source" : "openEHR"
           },
@@ -8497,6 +8494,9 @@
           },
           "/protocol[at0042]/items[at0047.1]" : {
             "source" : "FHIR, openEHR, DAM"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "source" : "openEHR,FHIR,DAM"
           }
         }
       }
@@ -8522,6 +8522,60 @@
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
             "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "local_terms"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "local_terms" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "local_terms",
+                        "code" : "1",
+                        "value" : "Penicillin"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "2",
+                        "value" : "Metronidazol"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "3",
+                        "value" : "Apfel"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "4",
+                        "value" : "Pflaster"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "5",
+                        "value" : "Immunglobuline"
+                      }, {
+                        "terminologyId" : "local_terms",
+                        "code" : "6",
+                        "value" : "Erythrozytenkonzentrat"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
